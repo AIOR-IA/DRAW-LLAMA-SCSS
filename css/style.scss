@@ -48,7 +48,15 @@ $background-grass:green;
             border-radius: 3.4375rem 0 0.625rem 0.625rem;
             transform: rotate(45deg);
             @include positionTopLeft(-9rem, -12rem);
-            box-shadow: 10rem -2rem $background-grass, 40rem -30rem $background-grass, 72rem -65rem $background-grass
+            box-shadow: 10rem -2rem $background-grass, 40rem -30rem $background-grass, 72rem -65rem $background-grass;
+            @media screen and (width > 1700px) {
+                width: 10rem;
+                height: 25rem;
+            }
+        }
+
+        @media screen and (width > 1700px) {
+            height: 24rem;
         }
     }
 }

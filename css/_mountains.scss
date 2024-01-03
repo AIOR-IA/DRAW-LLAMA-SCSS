@@ -5,11 +5,12 @@
  }
  
  .container__mountains {
+     background-color: purple;
      width: 100%;
      position: absolute;
-     margin: auto;
      left: calc(50% - 20rem);
      top: 52%;
+     
      &__hill {
          width: 22.5rem;
          height: 21.25rem;
@@ -35,4 +36,8 @@
          @include hillMarginLeftTop(36.25rem, -2.8125rem);
          z-index: 3;
      }
+  
+     @media screen and (min-width: 768px) {
+    }
+    
  }

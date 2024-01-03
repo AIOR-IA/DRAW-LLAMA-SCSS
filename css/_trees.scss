@@ -66,30 +66,42 @@ $background-trunk:rgb(109, 32, 32);
 .tree__two {
     @include baseTree(scale(0.5), 10.625rem);
     margin-left: 65.625rem;
+    @media screen and (width > 1700px) {
+        @include baseTree(scale(0.5), 16.625rem);        
+    }
 }
 
 .tree__three {
     @include baseTree(scale(0.5), 10.625rem);
     margin-right: 1050px;
+    @media screen and (width > 1700px) {
+        @include baseTree(scale(0.5), 16.625rem);        
+    }
 }
 
 .tree__four {
     @include baseTree(scale(1.1), 10.625rem);
     margin-right: 55rem;
+    @media screen and (width > 1700px) {
+        @include baseTree(scale(1.1), 14rem);        
+    }
 }
 
 .tree__five {
     @include baseTree(scale(1.1), 10.625rem);
     margin-left: 55rem;
+    @media screen and (width > 1700px) {
+        @include baseTree(scale(1.1), 14rem);        
+    }
 }
 
 .tree__six {
-    @include baseTree(scale(2.6), 12.1875rem);
+    @include baseTree(scale(2.4), 12.1875rem);
     margin-right: 35.625rem;
 }
 
 .tree__one {
-    @include baseTree(scale(2.6), 12.1875rem);
+    @include baseTree(scale(2.4), 12.1875rem);
     margin-left: 35.625rem;
 }
 

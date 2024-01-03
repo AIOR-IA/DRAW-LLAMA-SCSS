@@ -7,8 +7,9 @@ $background-ears-llama-tertiary:#ffe3e3;
 $background-body-llama-jaw:#fffefe;
 $background-body-llama-lips:#fee2e2;
 $background-body-food-llama:#91c33e;
-@mixin scaleLlama() {
-    transform: scale(0.9);
+
+@mixin scaleLlama($scale: 0.9) {
+    transform: scale($scale);
 }
 
 @mixin containerDefault($position, $width, $height, $top, $left) {
@@ -51,6 +52,13 @@ $background-body-food-llama:#91c33e;
     @include containerDefault(absolute, 31.25rem, 0, 41%, 50%);
     transform: translate(-50%, -50%);
     z-index: 100;
+    @media screen and (width > 1700px) {
+        transform: translate(-50%, -50%);
+         @include containerDefault(absolute, 31.25rem, 0, 58%, 37%);
+
+        @include scaleLlama(0.85);
+        
+    }
     &__legs {
         @include scaleLlama();
         @include containerDefault(absolute, 1.25rem, 5rem, 19.375rem, 11.875rem);
