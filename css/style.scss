@@ -1,0 +1,54 @@
+@use 'mountains';
+@use 'trees';
+@use 'llama';
+@use 'clouds';
+@use 'message.scss';
+$background-sky:#87cefa;
+$background-grass:green;
+@mixin flexAllContentCenter($direction, $justify:center, $align:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin positionTopLeft($top, $left) {
+    top: $top;
+    left: $left;
+}
+
+@mixin containerDisplay() {
+    position: absolute;
+    display: block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.landscape {
+    @include flexAllContentCenter(column, flex-end);
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-sky;
+    .container__grass {
+        @include containerDisplay();
+        border-top: 2px solid #2b2222;
+        background-color: $background-grass;
+        width: 100%;
+        height: 17.5rem;
+        z-index: 10;
+        &::before {
+            content: "";
+            @include containerDisplay();
+            height: 10rem;
+            width: 10rem;
+            border-radius: 3.4375rem 0 0.625rem 0.625rem;
+            transform: rotate(45deg);
+            @include positionTopLeft(-9rem, -12rem);
+            box-shadow: 10rem -2rem $background-grass, 40rem -30rem $background-grass, 72rem -65rem $background-grass
+        }
+    }
+}

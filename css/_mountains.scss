@@ -1,0 +1,38 @@
+ $background-mountain:#90443b;
+ @mixin hillMarginLeftTop($margin_left:0, $margin_top:0) {
+     margin-left: $margin_left;
+     margin-top: $margin_top;
+ }
+ 
+ .container__mountains {
+     width: 100%;
+     position: absolute;
+     margin: auto;
+     left: calc(50% - 20rem);
+     top: 52%;
+     &__hill {
+         width: 22.5rem;
+         height: 21.25rem;
+         position: fixed;
+         display: block;
+         background-color: $background-mountain;
+         border: 1.5px solid rgb(93, 25, 25);
+         transform: rotate(45deg);
+         border-radius: 0.5rem;
+     }
+     &--one {
+         @include hillMarginLeftTop(25.3125rem);
+         border-radius: 0.3125rem 0 0.625rem 0.625rem;
+         z-index: 2;
+     }
+     &--two {
+         @include hillMarginLeftTop(10.9375rem, -4.6875rem);
+         z-index: 5;
+     }
+     &--three {
+         width: 15.625rem;
+         height: 15.625rem;
+         @include hillMarginLeftTop(36.25rem, -2.8125rem);
+         z-index: 3;
+     }
+ }
