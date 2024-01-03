@@ -55,9 +55,12 @@ $background-body-food-llama:#91c33e;
     @media screen and (width > 1700px) {
         transform: translate(-50%, -50%);
          @include containerDefault(absolute, 31.25rem, 0, 58%, 37%);
-
-        @include scaleLlama(0.85);
-        
+        @include scaleLlama(0.85);  
+    }
+    @media screen and (width < 1200px) and (height < 550px) {
+        transform: translate(-50%, -50%);
+         @include containerDefault(absolute, 31.25rem, 0, 58%, 37%);
+        @include scaleLlama(0.7);  
     }
     &__legs {
         @include scaleLlama();

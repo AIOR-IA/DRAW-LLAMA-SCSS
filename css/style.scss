@@ -40,20 +40,7 @@ $background-grass:green;
         width: 100%;
         height: 17.5rem;
         z-index: 10;
-        &::before {
-            content: "";
-            @include containerDisplay();
-            height: 10rem;
-            width: 10rem;
-            border-radius: 3.4375rem 0 0.625rem 0.625rem;
-            transform: rotate(45deg);
-            @include positionTopLeft(-9rem, -12rem);
-            box-shadow: 10rem -2rem $background-grass, 40rem -30rem $background-grass, 72rem -65rem $background-grass;
-            @media screen and (width > 1700px) {
-                width: 10rem;
-                height: 25rem;
-            }
-        }
+        position: unset;
 
         @media screen and (width > 1700px) {
             height: 24rem;
